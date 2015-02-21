@@ -7,6 +7,10 @@ The ultimate goal would involve using [QEMU](www.qemu.org) to emulate a Raspberr
 
 The current installation planning can be found here: [install-specs](install-specs.md)
 
+###Docker container implementation
+
+An initial V0.0.1 version has been pushed to Docker hub that demonstrates the successful installation in a container itself. More information here: [Dockerfile](Dockerfile)
+
 
 ###Future possible add-ons
 
