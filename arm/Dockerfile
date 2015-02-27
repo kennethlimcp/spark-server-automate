@@ -1,7 +1,7 @@
 # Docker image to setup Spark-server
 # Only for ARMv7-based devices
 
-FROM armv7/armhf-ubuntu_core
+FROM armv7/armhf-ubuntu:14.04
 
 MAINTAINER Kenneth Lim<kennethlimcp@gmail.com>
 
