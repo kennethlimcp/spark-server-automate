@@ -7,6 +7,10 @@ The ultimate goal would involve using [QEMU](www.qemu.org) to emulate a Raspberr
 
 The current installation planning can be found here: [install-specs](install-specs.md)
 
+###First successful attempt on a **Odroid-C1(ARMv7 device)**
+
+![spark-server-docker](/pics/spark-server-in-docker.png)
+
 ###Docker container implementation
 
 An initial V0.0.1 version has been pushed to Docker hub that demonstrates the successful installation in a container itself. More information here: [Dockerfile](Dockerfile)
@@ -18,3 +22,10 @@ An initial V0.0.1 version has been pushed to Docker hub that demonstrates the su
 - Using [QEMU](www.qemu.org) to automate the entire testing and provisioning setup
 - Explore using **chef-solo** or **puppet** to handle the entire installation procedure
 - using [Docker](https://www.docker.com) to manage the entire setup and no longer require installation. Pull, run and play!
+
+###Platforms that *should* be supported
+- RPi B V1
+- RPi B+ V1
+- RPI V2
+- Hummingboard
+- Odroid
