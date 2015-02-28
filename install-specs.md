@@ -4,7 +4,6 @@ Spark-server installation automation
 ###Installation Procedures
 
 - `sudo apt-get update`
-- `sudo apt-get upgrade`
 - check whether **nodejs** is installed and install if not found
 - check whether **npm** is installed and install if not found (should come with nodejs installation)
 - check whether **git** is installed and install if not found
@@ -29,6 +28,12 @@ Use a traditional **shell script** method as **Ansible** does not love Windows u
 - extract the core private keys and upload to the core-keys directory?
 
     Openssl will be an installation requirement
+
+###Notes
+
+- `sudo apt-get upgrade` should not be used in a Docker container as images updates will be the way to go
+
+Which means, new containers will pull a newer image if one exists.
 
 
 ###Resources
