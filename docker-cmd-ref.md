@@ -13,6 +13,9 @@ docker ps -a
 docker rm $(docker ps --before b43e3946768a -q)
 #Remove containers created after a certain container
 docker rm $(docker ps --since a6ca4661ec7f -q)
+#Mass remove images except...
+docker rmi $(docker images | grep -v 'ubuntu\|my-image' | awk {'print $3'})
+
 
 ```
 
@@ -20,3 +23,4 @@ docker rm $(docker ps --since a6ca4661ec7f -q)
 
 - http://techoverflow.net/blog/2013/10/22/docker-remove-all-images-and-containers
 - http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
+- http://stackoverflow.com/questions/17665283/how-does-one-remove-an-image-in-docker
