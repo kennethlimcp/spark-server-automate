@@ -16,7 +16,8 @@ docker rm $(docker ps --since a6ca4661ec7f -q)
 #Mass remove images except...
 docker rmi $(docker images | grep -v 'ubuntu\|my-image' | awk {'print $3'})
 
-
+#Attach to a container (Ctrl + c to detach)
+docker attach -sig-proxy=false
 ```
 
 ###Resources
