@@ -1,0 +1,22 @@
+FROM container4armhf/armhf-alpine:3.3
+
+RUN buildDeps=' \
+    g++ \
+    git \
+    make \
+    python \
+    ' \
+    && set -x \
+    && apk update \
+    && apk add nodejs \
+    && apk add $buildDeps \
+    && git clone https://github.com/spark/spark-server \
+    && cd spark-server \
+    && npm install \
+    && apk del $buildDeps
+
+WORKDIR /spark-server
+
+#RUN npm install
+
+CMD ["node","main.js"]
